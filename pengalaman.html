@@ -29,86 +29,122 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
-    .services .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      justify-content: center;
-      padding: 20px;
-    }
+   /* Ensure the header is responsive */
+header {
+  padding: 10px;
+}
+
+#navmenu ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#navmenu ul li {
+  margin: 5px;
+}
+
+#navmenu ul li a {
+  padding: 10px;
+}
+
+.header-social-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Responsive Design for Tablets (Max Width: 768px) */
+@media (max-width: 768px) {
+  .header-social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #navmenu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navmenu ul li {
+    margin-bottom: 10px;
+  }
   
-    .service-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-      height: 100%;
-    }
-  
-    .service-item:hover {
-      transform: scale(1.05);
-    }
-  
-    .service-item img {
-      width: 100%;
-      max-width: 250px;
-      border-radius: 10px;
-    }
-  
-    .btn-primary {
-      margin-top: auto;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-align: center;
-    }
-  
-    /* Responsive Design for Tablets (Max Width: 768px) */
-    @media (max-width: 768px) {
-      .services .container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      }
-      .service-item {
-        padding: 15px;
-      }
-    }
-  
-    /* Responsive Design for Mobile Phones (Max Width: 480px) */
-    @media (max-width: 480px) {
-      .services .container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
-      .service-item {
-        padding: 10px;
-      }
-      .service-item img {
-        max-width: 200px;
-      }
-    }
-  
-    /* Ensuring that content is centered */
-    .row {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      flex-wrap: wrap;
-    }
-  
-    .col-lg-4 {
-      display: flex;
-      flex: 1 1 30%;
-      max-width: 30%;
-    }
-  
-    .service-item h3,
-    .service-item h6,
-    .service-item p {
-      text-align: center;
-    }
+  .services .container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .service-item {
+    padding: 15px;
+  }
+}
+
+/* Responsive Design for Mobile Phones (Max Width: 480px) */
+@media (max-width: 480px) {
+  .header-social-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #navmenu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item img {
+    max-width: 200px;
+  }
+
+  .services .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .service-item {
+    padding: 10px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-lg-4 {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .social-links {
+    gap: 15px;
+    justify-content: center;
+  }
+}
+
+/* Ensuring that content is centered */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.col-lg-4 {
+  display: flex;
+  flex: 1 1 30%;
+  max-width: 30%;
+}
+
+.service-item h3,
+.service-item h6,
+.service-item p {
+  text-align: center;
+}
+
   </style>
   
 </head>
