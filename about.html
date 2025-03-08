@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About - Juliana</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+    } */
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      background: linear-gradient(135deg, #f9f9f9, #e3e3e3);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .grid-item img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .grid-item p {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .skill-img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .skill-img:hover {
+      transform: scale(1.1);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: linear-gradient(to right, #ff8c00, #ff4500);
+      border-radius: 4px;
+    }
+
+    .progress-bar-wrap {
+      background: #f3f3f3;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 8px;
+    }
+
+    .soft-skills {
+      text-align: center;
+      margin-top: 50px;
+      background: #f9f9f9;
+      padding: 40px 20px;
+      border-radius: 15px;
+    }
+
+    .soft-skills-slider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .soft-skills-wrapper {
+      overflow: hidden;
+      width: 60%;
+    }
+
+    .soft-skills-list {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .soft-skill-card {
+      min-width: 100%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .soft-skill-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .soft-skill-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .slider-btn {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .left {
+      left: 10px;
+    }
+
+    .right {
+      right: 10px;
+    }
+  </style>
+  <script>
+    let currentIndex = 0;
+    function moveSlide(step) {
+      const slider = document.querySelector(".soft-skills-list");
+      const totalSlides = document.querySelectorAll(".soft-skill-card").length;
+      currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
+</head>
+
+<body class="about-page">
+
+  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Juliana</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="pengalaman.html">Experience</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <!-- <li><a href="portfolio.html"></a></li> -->
+          <li class="dropdown"><a href="#"><span>Download</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="assets/CV.pdf" download>CV.Pdf</a></li>
+              <li><a href="assets/Portofolio.pdf" download="Portfolio.pdf">Portfolio.Pdf</a></li>
+              <!-- <li><a href="#">CV.Pdf</a></li>
+              <li><a href="#">Portfolio.Pdf</a></li> -->
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="mailto:rosibajuliana@gmail.com"><i class="bi bi-envelope-at"></i></a>
+        <a href="https://wa.me/6281367438914"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/julna_nr07?igsh=dGQ2MWtwOGQ3Y3V1"><i class="bi bi-instagram"></i></a>
+        <a href="http://www.linkedin.com/in/juliana-nur-rosiba"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tentang Saya</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/ft3.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Juliana Nur Rosiba</h2>
+            <p class="fst-italic py-3">
+              Tertarik di bidang administrasi, komunikasi, customer service, dan front-end development. Memiliki
+              kemampuan komunikasi, bekerja sama tim, pengelolaan dokumen, kepemimpinan, serta pelayanan kepada customer
+              untuk mendukung kelancaran operasional dan pelayanan yang efektif.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Tanggal Lahir:</strong> <span>26 Juli 2003</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>rosibajuliana@gmail.com</span>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Nomor HP:</strong> <span>+6281367438914</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Domisili:</strong> <span>Kota Palembang</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Umur:</strong> <span>21 Tahun</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Pendidikan:</strong> <span>D-III Manajemen
+                      Informatika</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              Setiap tantangan adalah kesempatan untuk belajar dan berkembang. Dengan semangat kolaborasi dan inovasi,
+              saya terus mencari cara untuk memberikan nilai lebih dalam setiap pekerjaan yang saya lakukan.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /About Section -->
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tools</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="grid-container">
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/mco.png" alt="Microsoft Office">
+            <p>Microsoft Office</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/gw.png" alt="Google Workspace">
+            <p>Google Workspace</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/wps.png" alt="WPS Office">
+            <p>WPS Office</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/html.png" alt="HTML">
+            <p>HTML</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/css.png" alt="CSS">
+            <p>CSS</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/js.png" alt="JavaScript">
+            <p>JavaScript</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/php.png" alt="PHP">
+            <p>PHP</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/mysql.png" alt="MySQL">
+            <p>MySQL</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/xampp.png" alt="XAMPP">
+            <p>XAMPP</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/vs.png" alt="Visual Studio Code">
+            <p>Visual Studio Code</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/canva.png" alt="Canva">
+            <p>Canva</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/pc.png" alt="Picsart">
+            <p>Picsart</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/capcut.png" alt="Capcut">
+            <p>Capcut</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/dw.png" alt="Draw.io">
+            <p>Draw.io</p>
+          </div>
+          <div class="grid-item" data-aos="zoom-in">
+            <img class="skill-img" src="assets/img/uml.png" alt="SarUML">
+            <p>StarUML</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills Section -->
+
+      <div class="container soft-skills" data-aos="fade-up" data-aos-delay="200">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Soft Skills</h2>
+        </div>
+        <div class="soft-skills-slider">
+          <button class="slider-btn left" onclick="moveSlide(-1)">&#10094;</button>
+          <div class="soft-skills-wrapper">
+            <div class="soft-skills-list">
+              <div class="soft-skill-card" data-aos="fade-left">
+                <div class="soft-skill-content">
+                  <img class="soft-skill-icon" src="assets/img/cm.jpg" alt="Communication">
+                  <div>
+                    <h4>Komunikasi</h4>
+                    <p>Mampu menyampaikan ide dengan jelas dan efektif dalam berbagai situasi.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="soft-skill-card" data-aos="fade-left">
+                <div class="soft-skill-content">
+                  <img class="soft-skill-icon" src="assets/img/waktu.jpg" alt="Time Management">
+                  <div>
+                    <h4>Manajemen Waktu</h4>
+                    <p>Terampil dalam mengatur waktu untuk bekerja secara efisien dan produktif.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="soft-skill-card" data-aos="fade-left">
+                <div class="soft-skill-content">
+                  <img class="soft-skill-icon" src="assets/img/team.jpg" alt="Time Management">
+                  <div>
+                    <h4>Kerja Sama Tim</h4>
+                    <p> Bekerja dalam tim dengan komunikasi yang baik, menghargai pendapat anggota lain, serta
+                      menciptakan lingkungan kerja yang harmonis dan produktif.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="soft-skill-card" data-aos="fade-left">
+                <div class="soft-skill-content">
+                  <img class="soft-skill-icon" src="assets/img/ramah.jpg" alt="Friendliness & Patience">
+                  <div>
+                    <h4>Sikap Ramah & Sabar</h4>
+                    <p>Selalu bersikap positif, menghargai orang lain, dan menghadapi tantangan dengan kesabaran.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="soft-skill-card" data-aos="fade-left">
+                <div class="soft-skill-content">
+                  <img class="soft-skill-icon" src="assets/img/solving.jpg" alt="Problem Solving">
+                  <div>
+                    <h4>Problem Solving yang Baik</h4>
+                    <p>Kemampuan menganalisis dan menemukan solusi efektif dalam berbagai tantangan.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="soft-skill-card" data-aos="fade-left">
+                <div class="soft-skill-content">
+                  <img class="soft-skill-icon" src="assets/img/pemimpin.jpg" alt="Leadership">
+                  <div>
+                    <h4>Kepemimpinan</h4>
+                    <p>Memotivasi dan mengarahkan tim untuk mencapai tujuan dengan strategi yang baik.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn right" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container">
+      <div class="social-links d-flex justify-content-center">
+        <a href="mailto:rosibajuliana@gmail.com"><i class="bi bi-envelope-at"></i></a>
+        <a href="https://wa.me/6281367438914"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/julna_nr07?igsh=dGQ2MWtwOGQ3Y3V1"><i class="bi bi-instagram"></i></a>
+        <a href="http://www.linkedin.com/in/juliana-nur-rosiba"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon -->
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
