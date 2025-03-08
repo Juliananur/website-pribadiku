@@ -36,7 +36,7 @@
       justify-content: center;
       padding: 20px;
     }
-
+  
     .service-item {
       display: flex;
       flex-direction: column;
@@ -47,83 +47,70 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease-in-out;
+      height: 100%;
     }
-
+  
     .service-item:hover {
       transform: scale(1.05);
     }
-
+  
     .service-item img {
       width: 100%;
       max-width: 250px;
       border-radius: 10px;
     }
-
+  
     .btn-primary {
       margin-top: auto;
       padding: 10px 20px;
       border-radius: 5px;
+      text-align: center;
     }
-
+  
+    /* Responsive Design for Tablets (Max Width: 768px) */
     @media (max-width: 768px) {
       .services .container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       }
+      .service-item {
+        padding: 15px;
+      }
     }
-
+  
+    /* Responsive Design for Mobile Phones (Max Width: 480px) */
     @media (max-width: 480px) {
       .services .container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
+      .service-item {
+        padding: 10px;
+      }
+      .service-item img {
+        max-width: 200px;
+      }
     }
-
-    /* .services .container {
-      display: flex;
-      justify-content: center;
-    } */
-
+  
+    /* Ensuring that content is centered */
     .row {
       display: flex;
       justify-content: center;
       align-items: stretch;
-      /* Memastikan semua kotak punya tinggi yang sama */
       flex-wrap: wrap;
     }
-
+  
     .col-lg-4 {
       display: flex;
       flex: 1 1 30%;
-      /* Membuat semua kolom memiliki lebar yang sama */
       max-width: 30%;
-      /* Agar sejajar dengan lainnya */
     }
-
-    /* .service-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      height: 100%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 100%;
-    } */
-
-    /* .service-item img {
-      width: 70px;
-      height: auto;
-      margin-bottom: 15px;
-    } */
-
+  
     .service-item h3,
     .service-item h6,
     .service-item p {
       text-align: center;
     }
   </style>
+  
 </head>
 
 <body class="services-page">
@@ -172,10 +159,10 @@
         <h2>Pengalaman Kerja & Organisasi</h2>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-            <div class="service-item">
+            <div class="service-item d-flex flex-column">
               <img src="assets/img/magang.png" class="img-fluid mb-3" alt="Magang">
               <h3>Magang</h3>
               <h6>Ombudsman RI Perwakilan Sumatera Selatan</h6>
@@ -184,7 +171,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-            <div class="service-item">
+            <div class="service-item d-flex flex-column">
               <img src="assets/img/live.png" class="img-fluid mb-3" alt="Host Live">
               <h3>Host Live</h3>
               <h6>PT. Fanaka Digital Indonesia</h6>
@@ -193,7 +180,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-            <div class="service-item">
+            <div class="service-item d-flex flex-column">
               <img src="assets/img/hmj.png" class="img-fluid mb-3" alt="HMJ">
               <h3>Anggota & Wakil Kepala Divisi PTKP</h3>
               <h6>Himpunan Mahasiswa Jurusan Manajemen Informatika</h6>
@@ -203,6 +190,7 @@
           </div>
         </div>
       </div>
+      
     </section>
   </main>
 
