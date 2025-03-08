@@ -30,9 +30,57 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
     .services .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .service-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .service-item:hover {
+      transform: scale(1.05);
+    }
+
+    .service-item img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    .btn-primary {
+      margin-top: auto;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .services .container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+
+    /* .services .container {
       display: flex;
       justify-content: center;
-    }
+    } */
 
     .row {
       display: flex;
@@ -50,7 +98,7 @@
       /* Agar sejajar dengan lainnya */
     }
 
-    .service-item {
+    /* .service-item {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -60,17 +108,15 @@
       border-radius: 10px;
       padding: 20px;
       height: 100%;
-      /* Semua kotak memiliki tinggi yang sama */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       width: 100%;
-    }
+    } */
 
-    .service-item img {
+    /* .service-item img {
       width: 70px;
-      /* Sesuaikan ukuran logo agar lebih kecil */
       height: auto;
       margin-bottom: 15px;
-    }
+    } */
 
     .service-item h3,
     .service-item h6,

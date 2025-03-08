@@ -37,8 +37,51 @@
         min-height: 100vh;
         background-color: #f4f4f4;
     } */
-    
     .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.05);
+    }
+
+    .skill-img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+    }
+
+
+    /* .grid-container {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
@@ -63,7 +106,7 @@
     .grid-item:hover {
       transform: scale(1.05);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
+    } */
 
     .grid-item img {
       width: 60px;
@@ -271,48 +314,100 @@
     </section><!-- /About Section -->
     <section id="skills" class="skills section">
       <div class="container section-title" data-aos="fade-up">
-          <h2>Tools</h2>
+        <h2>Tools</h2>
       </div>
       <div class="container grid-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/mco.png" alt="Microsoft Office"><p>Microsoft Office</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/gw.png" alt="Google Workspace"><p>Google Workspace</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/wps.png" alt="WPS Office"><p>WPS Office</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/html.png" alt="HTML"><p>HTML</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/css.png" alt="CSS"><p>CSS</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/js.png" alt="JavaScript"><p>JavaScript</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/php.png" alt="PHP"><p>PHP</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/mysql.png" alt="MySQL"><p>MySQL</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/xampp.png" alt="XAMPP"><p>XAMPP</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/vs.png" alt="Visual Studio Code"><p>Visual Studio Code</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/canva.png" alt="Canva"><p>Canva</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/pc.png" alt="Picsart"><p>Picsart</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/capcut.png" alt="Capcut"><p>Capcut</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/dw.png" alt="Draw.io"><p>Draw.io</p></div>
-          <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/uml.png" alt="SarUML"><p>StarUML</p></div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/mco.png"
+            alt="Microsoft Office">
+          <p>Microsoft Office</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/gw.png" alt="Google Workspace">
+          <p>Google Workspace</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/wps.png" alt="WPS Office">
+          <p>WPS Office</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/html.png" alt="HTML">
+          <p>HTML</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/css.png" alt="CSS">
+          <p>CSS</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/js.png" alt="JavaScript">
+          <p>JavaScript</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/php.png" alt="PHP">
+          <p>PHP</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/mysql.png" alt="MySQL">
+          <p>MySQL</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/xampp.png" alt="XAMPP">
+          <p>XAMPP</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/vs.png"
+            alt="Visual Studio Code">
+          <p>Visual Studio Code</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/canva.png" alt="Canva">
+          <p>Canva</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/pc.png" alt="Picsart">
+          <p>Picsart</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/capcut.png" alt="Capcut">
+          <p>Capcut</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/dw.png" alt="Draw.io">
+          <p>Draw.io</p>
+        </div>
+        <div class="grid-item" data-aos="zoom-in"><img class="skill-img" src="assets/img/uml.png" alt="SarUML">
+          <p>StarUML</p>
+        </div>
       </div>
       <div class="container soft-skills" data-aos="fade-up" data-aos-delay="200">
-          <h2>Soft Skills</h2>
-          <div class="soft-skills-slider">
-              <button class="slider-btn left" onclick="moveSlide(-1)">&#10094;</button>
-              <div class="soft-skills-wrapper">
-                  <div class="soft-skills-list">
-                      <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/cm.jpg" alt="Communication"><h4>Komunikasi</h4><p>Mampu menyampaikan ide dengan jelas dan efektif dalam berbagai situasi.</p></div>
-                      <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/waktu.jpg" alt="Time Management"><h4>Manajemen Waktu</h4><p>Terampil dalam mengatur waktu untuk bekerja secara efisien dan produktif.</p></div>
-                      <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/team.jpg" alt="Team Work"><h4>Kerja Sama Tim</h4><p>Bekerja dalam tim dengan komunikasi yang baik, menghargai pendapat anggota lain, serta menciptakan lingkungan kerja yang harmonis dan produktif.</p></div>
-                      <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/ramah.jpg" alt="Friendliness & Patience"><h4>Sikap Ramah & Sabar</h4><p>Selalu bersikap positif, menghargai orang lain, dan menghadapi tantangan dengan kesabaran.</p></div>
-                      <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/solving.jpg" alt="Problem Solving"><h4>Problem Solving yang Baik</h4><p>Kemampuan menganalisis dan menemukan solusi efektif dalam berbagai tantangan.</p></div>
-                      <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/pemimpin.jpg" alt="Leadership"><h4>Kepemimpinan</h4><p>Memotivasi dan mengarahkan tim untuk mencapai tujuan dengan strategi yang baik.</p></div>
-                  </div>
+        <h2>Soft Skills</h2>
+        <div class="soft-skills-slider">
+          <button class="slider-btn left" onclick="moveSlide(-1)">&#10094;</button>
+          <div class="soft-skills-wrapper">
+            <div class="soft-skills-list">
+              <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/cm.jpg"
+                  alt="Communication">
+                <h4>Komunikasi</h4>
+                <p>Mampu menyampaikan ide dengan jelas dan efektif dalam berbagai situasi.</p>
               </div>
-              <button class="slider-btn right" onclick="moveSlide(1)">&#10095;</button>
+              <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/waktu.jpg"
+                  alt="Time Management">
+                <h4>Manajemen Waktu</h4>
+                <p>Terampil dalam mengatur waktu untuk bekerja secara efisien dan produktif.</p>
+              </div>
+              <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/team.jpg"
+                  alt="Team Work">
+                <h4>Kerja Sama Tim</h4>
+                <p>Bekerja dalam tim dengan komunikasi yang baik, menghargai pendapat anggota lain, serta menciptakan
+                  lingkungan kerja yang harmonis dan produktif.</p>
+              </div>
+              <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon" src="assets/img/ramah.jpg"
+                  alt="Friendliness & Patience">
+                <h4>Sikap Ramah & Sabar</h4>
+                <p>Selalu bersikap positif, menghargai orang lain, dan menghadapi tantangan dengan kesabaran.</p>
+              </div>
+              <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon"
+                  src="assets/img/solving.jpg" alt="Problem Solving">
+                <h4>Problem Solving yang Baik</h4>
+                <p>Kemampuan menganalisis dan menemukan solusi efektif dalam berbagai tantangan.</p>
+              </div>
+              <div class="soft-skill-card" data-aos="fade-left"><img class="soft-skill-icon"
+                  src="assets/img/pemimpin.jpg" alt="Leadership">
+                <h4>Kepemimpinan</h4>
+                <p>Memotivasi dan mengarahkan tim untuk mencapai tujuan dengan strategi yang baik.</p>
+              </div>
+            </div>
           </div>
+          <button class="slider-btn right" onclick="moveSlide(1)">&#10095;</button>
+        </div>
       </div>
-  </section>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4adeb859032421478e346d8374ef4719a3a78718
+    </section>
   </main>
 
   <footer id="footer" class="footer light-background">
